@@ -51,3 +51,7 @@ This interactive Shiny application enables users to upload CSV datasets and auto
     shiny::runApp()
 
   Or just click Run App button present right corner of the source window.
+```
+<p align="center">
+  <img src="misc/rstudio_app_run.jpeg" alt="App Screenshot" width="600"/>
+</p>
