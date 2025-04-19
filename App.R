@@ -1,10 +1,27 @@
-library(shiny)
-library(ggplot2)
-library(DT)
-library(colourpicker)
-library(reshape2)
-library(ggcorrplot)
-library(dplyr)
+####### RSHINY APPLICATION FOR BASIC PLOTS AND STATS #####
+############### Author: Hemanth Mydugolam ################
+# Function to install and load packages
+install_and_load <- function(pkg) {
+  if (!require(pkg, character.only = TRUE)) {
+    install.packages(pkg, dependencies = TRUE)
+    library(pkg, character.only = TRUE)
+  }
+}
+
+# List of required packages
+packages <- c(
+  "shiny", 
+  "ggplot2", 
+  "DT", 
+  "colourpicker", 
+  "reshape2", 
+  "ggcorrplot", 
+  "dplyr"
+)
+
+# install or load package
+invisible(lapply(packages, install_and_load))
+
 
 ui <- fluidPage(
   tags$head(
